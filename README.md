@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner.png" width="400">
+  <img src="banner.png" width="300">
 </p>
 
 <h1 align="center">Rhythm Player 🎵</h1>

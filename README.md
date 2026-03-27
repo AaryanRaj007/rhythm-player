@@ -1,9 +1,8 @@
 <p align="center">
-  <img src="logo.png" width="400">
+  <img src="banner.png" width="400">
 </p>
 
 <h1 align="center">Rhythm Player 🎵</h1>
-# Rhythm Player 🎵
 
 A simple music player app for playing and organizing locally stored audio files.
 

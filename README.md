@@ -1,16 +1,22 @@
-# rhythm
+# Rhythm Player 🎵
 
-A new Flutter project.
+A simple music player app for playing and organizing locally stored audio files.
 
-## Getting Started
+## Features
+- Scan and play downloaded songs
+- Create and manage playlists
+- Equalizer with custom presets
+- Widget controls (play, pause, skip)
 
-This project is a starting point for a Flutter application.
+## About
+This is a beginner project built to learn app development and create a useful music player.
 
-A few resources to get you started if this is your first Flutter project:
+## Tech Used
+- Flutter
+- Dart
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Download
+You can download the APK from the Releases section.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Status
+Work in progress 🚧

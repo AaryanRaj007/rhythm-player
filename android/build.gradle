@@ -1,0 +1,38 @@
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+
+subprojects {
+    plugins.withId("com.android.library") {
+        def manifestFile = new File(projectDir, "src/main/AndroidManifest.xml")
+        if (manifestFile.exists()) {
+            def content = manifestFile.text
+            def m = (content =~ /package="([^"]+)"/)
+            if (m.find()) {
+                android.namespace = m.group(1)
+            }
+        }
+    }
+    plugins.withId("org.jetbrains.kotlin.android") {
+        android {
+            kotlinOptions {
+                jvmTarget = "1.8"
+            }
+        }
+    }
+}

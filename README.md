@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="logo.png" width="120">
+</p>
 # Rhythm Player 🎵
 
 A simple music player app for playing and organizing locally stored audio files.

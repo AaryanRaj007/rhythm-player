@@ -20,4 +20,4 @@ This is a beginner project built to learn app development and create a useful mu
 You can download the APK from the Releases section.
 
 ## Status
-Work in progress 🚧
+Work in progress .... 🚧

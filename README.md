@@ -1,7 +1,7 @@
 
 <h1 align="center">Rhythm Player 🎵</h1>
 
-A simple music player app for playing and organizing locally stored audio files.
+A simple music player app for playing and organizing locally stored audio files..
 
 ## Features
 - Scan and play downloaded songs

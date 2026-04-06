@@ -171,7 +171,7 @@ class _HomeScreenState extends State<HomeScreen> {
             successCount++;
           }
         } catch (e) {
-          debugPrint('Failed to delete native file: \$e');
+          debugPrint('Failed to delete native file: $e');
         }
       }
     }
@@ -190,7 +190,7 @@ class _HomeScreenState extends State<HomeScreen> {
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('Deleted \$successCount song(s)', 
+          content: Text('Deleted $successCount song(s)', 
               style: AppTheme.labelText(color: Colors.white)),
           backgroundColor: AppTheme.bgElevated,
           duration: const Duration(seconds: 3),
@@ -199,57 +199,7 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
-  void _showSongOptions(SongModel song) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    final sheetBg = isDark ? AppTheme.bgElevated : AppTheme.lightBgSurface;
-    showModalBottomSheet(
-      context: context,
-      backgroundColor: sheetBg,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-      ),
-      builder: (ctx) => Padding(
-        padding: const EdgeInsets.symmetric(vertical: 16),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            // Song info header
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-              child: Text(song.title,
-                  style: AppTheme.songTitle(
-                      color: isDark ? Colors.white : AppTheme.lightTextPrimary),
-                  maxLines: 1, overflow: TextOverflow.ellipsis),
-            ),
-            const SizedBox(height: 8),
-            ListTile(
-              leading: Icon(Icons.playlist_add_rounded,
-                  color: Theme.of(context).colorScheme.primary),
-              title: Text('Add to Playlist',
-                  style: AppTheme.songTitle(
-                      color: isDark ? Colors.white : AppTheme.lightTextPrimary)),
-              onTap: () {
-                Navigator.pop(ctx);
-                _showAddToPlaylistDialog(song);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.play_arrow_rounded,
-                  color: Theme.of(context).colorScheme.primary),
-              title: Text('Play Now',
-                  style: AppTheme.songTitle(
-                      color: isDark ? Colors.white : AppTheme.lightTextPrimary)),
-              onTap: () {
-                Navigator.pop(ctx);
-                final idx = _songs.indexOf(song);
-                _onSongTap(song, idx >= 0 ? idx : 0);
-              },
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+
 
   void _showAddToPlaylistDialog(SongModel song) {
     final isDark = Theme.of(context).brightness == Brightness.dark;

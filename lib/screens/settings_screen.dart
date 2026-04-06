@@ -75,7 +75,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           if (mounted) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Text('Successfully imported \$added song(s)!',
+                content: Text('Successfully imported $added song(s)!',
                     style: AppTheme.labelText(color: Colors.white)),
                 backgroundColor: AppTheme.bgElevated,
                 duration: const Duration(seconds: 3),
@@ -87,7 +87,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         }
       }
     } catch (e) {
-      debugPrint("File picking failed: \$e");
+      debugPrint("File picking failed: $e");
     }
   }
 

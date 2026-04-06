@@ -42,9 +42,9 @@ class SongTile extends StatelessWidget {
       onLongPress: onLongPress,
       child: Container(
         height: 68,
-        color: isSelected ? accent.withValues(alpha: 0.1) : Colors.transparent,
         padding: const EdgeInsets.symmetric(horizontal: 20),
         decoration: BoxDecoration(
+          color: isSelected ? accent.withValues(alpha: 0.1) : Colors.transparent,
           border: Border(
             bottom: BorderSide(color: elevatedColor, width: 0.5),
           ),

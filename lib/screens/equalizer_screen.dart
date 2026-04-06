@@ -32,7 +32,7 @@ class _EqualizerScreenState extends State<EqualizerScreen> {
 
   final AudioService _audioService = AudioService();
   List<double> _bandValues = [0, 0, 0, 0, 0];
-  List<double> _customBandValues = [0, 0, 0, 0, 0]; // Store user's bespoke settings
+  final List<double> _customBandValues = [0, 0, 0, 0, 0]; // Store user's bespoke settings
   
   double _bassBoost = 0;
   double _customBassBoost = 0; // Store user's bespoke bass

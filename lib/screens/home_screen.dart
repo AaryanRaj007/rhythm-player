@@ -127,15 +127,59 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _onSongLongPress(SongModel song) {
-    if (!_isSelectionMode) {
-      setState(() {
-        _isSelectionMode = true;
-        _selectedSongIds.add(song.id);
-      });
+    if (_isSelectionMode) {
+      _toggleSelection(song.id);
       return;
     }
-    // If already in selection mode, just toggle like a normal tap
-    _toggleSelection(song.id);
+    // Show song options when not in selection mode
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final sheetBg = isDark ? AppTheme.bgElevated : AppTheme.lightBgSurface;
+    final textColor = isDark ? Colors.white : AppTheme.lightTextPrimary;
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: sheetBg,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      ),
+      builder: (ctx) => Padding(
+        padding: const EdgeInsets.symmetric(vertical: 16),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+              child: Text(song.title,
+                  style: AppTheme.songTitle(color: textColor),
+                  maxLines: 1, overflow: TextOverflow.ellipsis),
+            ),
+            const SizedBox(height: 8),
+            ListTile(
+              leading: Icon(Icons.playlist_add_rounded,
+                  color: Theme.of(context).colorScheme.primary),
+              title: Text('Add to Playlist',
+                  style: AppTheme.songTitle(color: textColor)),
+              onTap: () {
+                Navigator.pop(ctx);
+                _showAddToPlaylistDialog(song);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.checklist_rounded,
+                  color: Theme.of(context).colorScheme.primary),
+              title: Text('Select Multiple',
+                  style: AppTheme.songTitle(color: textColor)),
+              onTap: () {
+                Navigator.pop(ctx);
+                setState(() {
+                  _isSelectionMode = true;
+                  _selectedSongIds.add(song.id);
+                });
+              },
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   void _toggleSelection(int id) {

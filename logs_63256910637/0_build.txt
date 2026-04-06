@@ -1,0 +1,150 @@
+﻿2026-04-03T18:55:20.3534505Z Current runner version: '2.333.1'
+2026-04-03T18:55:20.3557572Z ##[group]Runner Image Provisioner
+2026-04-03T18:55:20.3558275Z Hosted Compute Agent
+2026-04-03T18:55:20.3558861Z Version: 20260213.493
+2026-04-03T18:55:20.3559374Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-04-03T18:55:20.3560013Z Build Date: 2026-02-13T00:28:41Z
+2026-04-03T18:55:20.3560612Z Worker ID: {e8534bac-2915-49ce-8d9d-8ec92dd63c62}
+2026-04-03T18:55:20.3561230Z Azure Region: westus3
+2026-04-03T18:55:20.3562034Z ##[endgroup]
+2026-04-03T18:55:20.3563441Z ##[group]Operating System
+2026-04-03T18:55:20.3563967Z Ubuntu
+2026-04-03T18:55:20.3564384Z 24.04.4
+2026-04-03T18:55:20.3564835Z LTS
+2026-04-03T18:55:20.3565212Z ##[endgroup]
+2026-04-03T18:55:20.3565646Z ##[group]Runner Image
+2026-04-03T18:55:20.3566089Z Image: ubuntu-24.04
+2026-04-03T18:55:20.3566565Z Version: 20260329.72.1
+2026-04-03T18:55:20.3567680Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260329.72/images/ubuntu/Ubuntu2404-Readme.md
+2026-04-03T18:55:20.3568980Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260329.72
+2026-04-03T18:55:20.3569766Z ##[endgroup]
+2026-04-03T18:55:20.3570708Z ##[group]GITHUB_TOKEN Permissions
+2026-04-03T18:55:20.3572668Z Contents: read
+2026-04-03T18:55:20.3573098Z Metadata: read
+2026-04-03T18:55:20.3573621Z Packages: read
+2026-04-03T18:55:20.3574053Z ##[endgroup]
+2026-04-03T18:55:20.3576299Z Secret source: Actions
+2026-04-03T18:55:20.3576986Z Prepare workflow directory
+2026-04-03T18:55:20.3895137Z Prepare all required actions
+2026-04-03T18:55:20.3950787Z Getting action download info
+2026-04-03T18:55:20.8529572Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-04-03T18:55:20.9303023Z Download action repository 'dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603' (SHA:9a04e6d73cca37bd455e0608d7e5092f881fd603)
+2026-04-03T18:55:21.5518271Z Complete job name: build
+2026-04-03T18:55:21.6168103Z ##[group]Run actions/checkout@v4
+2026-04-03T18:55:21.6169110Z with:
+2026-04-03T18:55:21.6169597Z   repository: AaryanRaj007/rhythm-player
+2026-04-03T18:55:21.6170447Z   token: ***
+2026-04-03T18:55:21.6170953Z   ssh-strict: true
+2026-04-03T18:55:21.6171517Z   ssh-user: git
+2026-04-03T18:55:21.6172009Z   persist-credentials: true
+2026-04-03T18:55:21.6172524Z   clean: true
+2026-04-03T18:55:21.6173017Z   sparse-checkout-cone-mode: true
+2026-04-03T18:55:21.6173549Z   fetch-depth: 1
+2026-04-03T18:55:21.6174048Z   fetch-tags: false
+2026-04-03T18:55:21.6174521Z   show-progress: true
+2026-04-03T18:55:21.6175020Z   lfs: false
+2026-04-03T18:55:21.6175413Z   submodules: false
+2026-04-03T18:55:21.6175930Z   set-safe-directory: true
+2026-04-03T18:55:21.6176717Z ##[endgroup]
+2026-04-03T18:55:21.7183737Z Syncing repository: AaryanRaj007/rhythm-player
+2026-04-03T18:55:21.7185724Z ##[group]Getting Git version info
+2026-04-03T18:55:21.7186780Z Working directory is '/home/runner/work/rhythm-player/rhythm-player'
+2026-04-03T18:55:21.7188103Z [command]/usr/bin/git version
+2026-04-03T18:55:21.7211361Z git version 2.53.0
+2026-04-03T18:55:21.7233629Z ##[endgroup]
+2026-04-03T18:55:21.7246613Z Temporarily overriding HOME='/home/runner/work/_temp/cb6c84a6-4d3f-41ab-8c92-fcd94b13770a' before making global git config changes
+2026-04-03T18:55:21.7248334Z Adding repository directory to the temporary git global config as a safe directory
+2026-04-03T18:55:21.7259784Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rhythm-player/rhythm-player
+2026-04-03T18:55:21.7287251Z Deleting the contents of '/home/runner/work/rhythm-player/rhythm-player'
+2026-04-03T18:55:21.7290338Z ##[group]Initializing the repository
+2026-04-03T18:55:21.7294450Z [command]/usr/bin/git init /home/runner/work/rhythm-player/rhythm-player
+2026-04-03T18:55:21.7355325Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-04-03T18:55:21.7356665Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-04-03T18:55:21.7357923Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-04-03T18:55:21.7359087Z hint: call:
+2026-04-03T18:55:21.7359538Z hint:
+2026-04-03T18:55:21.7360138Z hint: 	git config --global init.defaultBranch <name>
+2026-04-03T18:55:21.7360926Z hint:
+2026-04-03T18:55:21.7361815Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-04-03T18:55:21.7362894Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-04-03T18:55:21.7363689Z hint:
+2026-04-03T18:55:21.7364168Z hint: 	git branch -m <name>
+2026-04-03T18:55:21.7364659Z hint:
+2026-04-03T18:55:21.7365429Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-04-03T18:55:21.7366805Z Initialized empty Git repository in /home/runner/work/rhythm-player/rhythm-player/.git/
+2026-04-03T18:55:21.7368796Z [command]/usr/bin/git remote add origin https://github.com/AaryanRaj007/rhythm-player
+2026-04-03T18:55:21.7391012Z ##[endgroup]
+2026-04-03T18:55:21.7392084Z ##[group]Disabling automatic garbage collection
+2026-04-03T18:55:21.7394723Z [command]/usr/bin/git config --local gc.auto 0
+2026-04-03T18:55:21.7416461Z ##[endgroup]
+2026-04-03T18:55:21.7417202Z ##[group]Setting up auth
+2026-04-03T18:55:21.7422734Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-03T18:55:21.7446459Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-03T18:55:21.7678857Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-04-03T18:55:21.7704328Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-04-03T18:55:21.7871170Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-04-03T18:55:21.7895335Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-04-03T18:55:21.8073012Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-04-03T18:55:21.8101720Z ##[endgroup]
+2026-04-03T18:55:21.8103288Z ##[group]Fetching the repository
+2026-04-03T18:55:21.8111572Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ff926b85f7b1aae1f59eef8e4bf82e8291f151b2:refs/remotes/origin/main
+2026-04-03T18:55:22.5578637Z From https://github.com/AaryanRaj007/rhythm-player
+2026-04-03T18:55:22.5580274Z  * [new ref]         ff926b85f7b1aae1f59eef8e4bf82e8291f151b2 -> origin/main
+2026-04-03T18:55:22.5602306Z ##[endgroup]
+2026-04-03T18:55:22.5703006Z ##[group]Determining the checkout info
+2026-04-03T18:55:22.5705777Z ##[endgroup]
+2026-04-03T18:55:22.5707033Z [command]/usr/bin/git sparse-checkout disable
+2026-04-03T18:55:22.5711643Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-04-03T18:55:22.5716896Z ##[group]Checking out the ref
+2026-04-03T18:55:22.5719374Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-04-03T18:55:22.5731030Z Switched to a new branch 'main'
+2026-04-03T18:55:22.5732494Z branch 'main' set up to track 'origin/main'.
+2026-04-03T18:55:22.5736227Z ##[endgroup]
+2026-04-03T18:55:22.5763186Z [command]/usr/bin/git log -1 --format=%H
+2026-04-03T18:55:22.5781643Z ff926b85f7b1aae1f59eef8e4bf82e8291f151b2
+2026-04-03T18:55:22.6005294Z ##[group]Run dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
+2026-04-03T18:55:22.6006798Z with:
+2026-04-03T18:55:22.6007506Z   sdk: stable
+2026-04-03T18:55:22.6008263Z   architecture: x64
+2026-04-03T18:55:22.6009068Z ##[endgroup]
+2026-04-03T18:55:22.6147707Z ##[group]Run $GITHUB_ACTION_PATH/setup.sh stable Linux x64
+2026-04-03T18:55:22.6149358Z [36;1m$GITHUB_ACTION_PATH/setup.sh stable Linux x64[0m
+2026-04-03T18:55:22.6171648Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-04-03T18:55:22.6172894Z ##[endgroup]
+2026-04-03T18:55:22.6269110Z Installing Dart SDK version "latest" from the stable channel on linux-x64
+2026-04-03T18:55:22.6272012Z Downloading https://storage.googleapis.com/dart-archive/channels/stable/release/latest/sdk/dartsdk-linux-x64-release.zip...
+2026-04-03T18:55:22.6311982Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-04-03T18:55:22.6314703Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-04-03T18:55:22.6316130Z 
+2026-04-03T18:55:23.5353481Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-04-03T18:55:24.5149977Z  47  218M   47  102M    0     0   113M      0  0:00:01 --:--:--  0:00:01  113M
+2026-04-03T18:55:24.5153265Z 100  218M  100  218M    0     0   116M      0  0:00:01  0:00:01 --:--:--  116M
+2026-04-03T18:55:29.1783222Z Succesfully installed Dart SDK:
+2026-04-03T18:55:29.1796271Z Dart SDK version: 3.11.4 (stable) (Tue Mar 24 01:02:20 2026 -0700) on "linux_x64"
+2026-04-03T18:55:29.1857346Z ##[group]Run dart pub get
+2026-04-03T18:55:29.1857655Z [36;1mdart pub get[0m
+2026-04-03T18:55:29.1879164Z shell: /usr/bin/bash -e {0}
+2026-04-03T18:55:29.1879449Z env:
+2026-04-03T18:55:29.1879703Z   PUB_CACHE: /home/runner/.pub-cache
+2026-04-03T18:55:29.1879972Z ##[endgroup]
+2026-04-03T18:55:29.2063892Z Resolving dependencies...
+2026-04-03T18:55:29.3476702Z Because rhythm depends on flutter_test from sdk which doesn't exist (the Flutter SDK is not available), version solving failed.
+2026-04-03T18:55:29.3477233Z 
+2026-04-03T18:55:29.3477440Z Flutter users should use `flutter pub` instead of `dart pub`.
+2026-04-03T18:55:29.7222573Z ##[error]Process completed with exit code 69.
+2026-04-03T18:55:29.7337189Z Post job cleanup.
+2026-04-03T18:55:29.8205796Z [command]/usr/bin/git version
+2026-04-03T18:55:29.8238163Z git version 2.53.0
+2026-04-03T18:55:29.8278203Z Temporarily overriding HOME='/home/runner/work/_temp/15d50e18-171c-4dc0-abec-85c9e19395c0' before making global git config changes
+2026-04-03T18:55:29.8279530Z Adding repository directory to the temporary git global config as a safe directory
+2026-04-03T18:55:29.8284785Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rhythm-player/rhythm-player
+2026-04-03T18:55:29.8318177Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-03T18:55:29.8350377Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-03T18:55:29.8524044Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-04-03T18:55:29.8541194Z http.https://github.com/.extraheader
+2026-04-03T18:55:29.8552601Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-04-03T18:55:29.8578049Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-04-03T18:55:29.8753547Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-04-03T18:55:29.8779722Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-04-03T18:55:29.9041025Z Cleaning up orphan processes
+2026-04-03T18:55:29.9274332Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
